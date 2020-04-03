@@ -1,0 +1,49 @@
+depth=50
+width=4
+
+for d=1,depth do
+  for i=1,width/2-1 do
+    for j=1,width-1 do
+      turtle.digDown()
+      turtle.forward()
+    end
+    turtle.digDown()
+    turtle.turnRight()
+    turtle.forward()
+    turtle.turnRight()
+    for j=1,width-1 do
+      turtle.digDown()
+      turtle.forward()
+    end
+    turtle.digDown()
+    turtle.turnLeft()
+    turtle.forward()
+    turtle.turnLeft()
+  end
+  for j=1,width-1 do
+    turtle.digDown()
+    turtle.forward()
+  end
+  turtle.digDown()
+  turtle.turnRight()
+  turtle.forward()
+  turtle.turnRight()
+  for j=1,width-1 do
+    turtle.digDown()
+    turtle.forward()
+  end
+  turtle.digDown()
+  turtle.turnRight()
+  turtle.down()
+end
+
+for d=1,depth/(width-1) do
+  for i=1,width-1 do
+    turtle.up()
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnRight()
+end
+turtle.placeDown()
+

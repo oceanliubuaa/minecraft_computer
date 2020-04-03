@@ -1,0 +1,94 @@
+init=24
+depth=32
+width=32
+slot=1
+
+for d=1,init do
+  turtle.digDown()
+  turtle.down()
+end
+
+for d=1,depth do
+  for i=1,width/2-1 do
+    for j=1,width-1 do
+      turtle.digDown()
+      turtle.dig()
+      turtle.forward()
+    end
+    turtle.digDown()
+    turtle.turnRight()
+    turtle.dig()
+    turtle.forward()
+    turtle.turnRight()
+    for j=1,width-1 do
+      turtle.digDown()
+      turtle.dig()
+      turtle.forward()
+    end
+    turtle.digDown()
+    turtle.turnLeft()
+    turtle.dig()
+    turtle.forward()
+    turtle.turnLeft()
+  end
+  for j=1,width-1 do
+    turtle.digDown()
+    turtle.dig()
+    turtle.forward()
+  end
+  turtle.digDown()
+  turtle.turnRight()
+  turtle.dig()
+  turtle.forward()
+  turtle.turnRight()
+  for j=1,width-1 do
+    turtle.digDown()
+    turtle.dig()
+    turtle.forward()
+  end
+  turtle.digdown()
+  turtle.turnRight()
+  turtle.down()
+end
+
+for h=1,depth/4-1 do
+  turtle.up()
+  turtle.up()
+  turtle.up()
+  turtle.up()
+  for i=1.width/2-1 do
+  for j=1,width-1 do
+    if turtle.getItemCount(slot)==0 then
+      slot=slot+1
+      turtle.select(slot)
+    end
+    turtle.placeDown()
+    turtle.forward()
+  end
+  if turtle.getItemCount(slot)==0 then
+    slot=slot+1
+    turtle.select(slot)
+  end
+  turtle.placeDown()
+  turtle.turnRight()
+  turtle.forward()
+  turtle.turnRight()
+  for j=1,width-1 do
+    if turtle.getItemCount(slot)==0 then
+      slot=slot+1
+      turtle.select(slot)
+    end
+    turtle.placeDown()
+    turtle.forward()
+  end
+  if turtle.getItemCount(slot)==0 then
+    slot=slot+1
+    turtle.select(slot)
+  end
+  turtle.placeDown()
+  turtle.turnLeft()
+  turtle.forward()
+  turtle.turnLeft()
+  end
+  for j=1,width-1 do
+    

@@ -1,0 +1,42 @@
+width=24
+length=16
+height=6
+init=12
+
+for h=1,init do
+  turtle.up()
+end
+
+for h=1,height do
+  for i=1,length/2 do
+    for j=1,width do
+      turtle.digUp()
+      turtle.dig()
+      turtle.forward()
+    end
+    turtle.turnRight()
+    turtle.dig()
+    turtle.forward()
+    turtle.turnRight()
+    turtle.dig()
+    turtle.forward()
+    for j=1,width do
+      turtle.digUp()
+      turtle.dig()
+      turtle.forward()
+    end
+    turtle.turnLeft()
+    turtle.dig()
+    turtle.forward()
+    turtle.turnLeft()
+    turtle.dig()
+    turtle.forward()
+  end
+turtle.turnLeft()
+turtle.forward()
+turtle.up()
+end
+
+for h=1,(height+init) do
+  turtle.down()
+end

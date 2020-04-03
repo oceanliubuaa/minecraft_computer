@@ -1,0 +1,40 @@
+width=20
+length=20
+height=1
+slot=1
+
+for h=1,height do
+  turtle.up()
+end
+for i=1,length/2 do
+  for j=1,width do
+    if turtle.getItemCount(slot)==0 then
+      slot=slot+1
+      turtle.select(slot)
+    end
+    turtle.placeDown()
+    turtle.dig()
+    turtle.forward()
+  end
+  turtle.turnRight()
+  turtle.dig()
+  turtle.forward()
+  turtle.turnRight()
+  turtle.dig()
+  turtle.forward()
+  for j=1,width do
+    if turtle.getItemCount(slot)==0 then
+      slot=slot+1
+      turtle.select(slot)
+    end
+    turtle.placeDown()
+    turtle.dig()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  turtle.dig()
+  turtle.forward()
+  turtle.turnLeft()
+  turtle.dig()
+  turtle.forward()
+end
