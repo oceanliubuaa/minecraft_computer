@@ -57,42 +57,77 @@ for h=1,depth/4-1 do
   turtle.up()
   turtle.up()
   for i=1.width/2-1 do
-  for j=1,width-1 do
+    for j=1,width-1 do
+      if turtle.getItemCount(slot)==0 then
+        slot=slot+1
+        turtle.select(slot)
+      end
+      turtle.placeDown()
+      turtle.forward()
+    end
     if turtle.getItemCount(slot)==0 then
       slot=slot+1
       turtle.select(slot)
     end
     turtle.placeDown()
+    turtle.turnRight()
     turtle.forward()
-  end
-  if turtle.getItemCount(slot)==0 then
-    slot=slot+1
-    turtle.select(slot)
-  end
-  turtle.placeDown()
-  turtle.turnRight()
-  turtle.forward()
-  turtle.turnRight()
-  for j=1,width-1 do
+    turtle.turnRight()
+    for j=1,width-1 do
+      if turtle.getItemCount(slot)==0 then
+        slot=slot+1
+        turtle.select(slot)
+      end
+      turtle.placeDown()
+      turtle.forward()
+    end
     if turtle.getItemCount(slot)==0 then
       slot=slot+1
       turtle.select(slot)
     end
     turtle.placeDown()
+    turtle.turnLeft()
     turtle.forward()
+    turtle.turnLeft()
   end
-  if turtle.getItemCount(slot)==0 then
-    slot=slot+1
-    turtle.select(slot)
-  end
-  turtle.placeDown()
-  turtle.turnLeft()
-  turtle.forward()
-  turtle.turnLeft()
-  end
-  for j=1,width-1 do
-  if turtle.getItemCount(slot)==0 then
-    slot=slot+1
-    turtle.select(slot)
-  end
+    for j=1,width-1 do
+      if turtle.getItemCount(slot)==0 then
+        slot=slot+1
+        turtle.select(slot)
+      end
+      turtle.placeDown()
+      turtle.forward()
+    end
+    if turtle.getItemCount(slot)==0 then
+      slot=slot+1
+      turtle.select(slot)
+    end
+    turtle.placeDown()
+    turtle.turnRight()
+    turtle.forward()
+    turtle.turnRight()
+    for j=1,width-1 do
+      if turtle.getItemCount(slot)==0 then
+        slot=slot+1
+        turtle.select(slot)
+      end
+      turtle.placeDown()
+      turtle.forward()
+    end
+    if turtle.getItemCount(slot)==0 then
+      slot=slot+1
+      turtle.select(slot)
+    end
+    turtle.placeDown()
+    turtle.turnRight()
+    for j=1,width-1 do
+      turtle.forward()
+    end
+    turtle.turnRight()
+end
+
+for d=1,init+4 do
+  turtle.up()
+end
+turtle.forward()
     
