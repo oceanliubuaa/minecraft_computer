@@ -91,4 +91,7 @@ for h=1,depth/4-1 do
   turtle.turnLeft()
   end
   for j=1,width-1 do
-    
+  if turtle.getItemCount(slot)==0 then
+    slot=slot+1
+    turtle.select(slot)
+  end
